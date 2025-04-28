@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Alik Biswas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <li><button id="theme-toggle">🌙</button></li>
+
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="skills">
+        <h2>My Skills</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-item">
+            <p>C</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>Java</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 55%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>Python</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>HTML</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 60%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>CSS</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 45%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>JavaScript</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 50%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>Word/Excel/PowerPoint</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>Figma</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 65%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-item">
+            <p>Visual Studio</p>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+
+    <footer>
+        <p>© 2025 Alik Biswas. All rights reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('load', () => {
+          document.body.classList.add('loaded');
+        });
+      </script>
+      <script>
+        // Fade-out on link click
+        const navLinks = document.querySelectorAll('a');
+      
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            if (link.href && link.target !== "_blank") {
+              e.preventDefault();
+              document.body.classList.remove('loaded');
+              setTimeout(() => {
+                window.location.href = link.href;
+              }, 500); // match transition time (0.5s)
+            }
+          });
+        });
+      </script>
+      <script>
+        window.addEventListener('load', () => {
+          document.body.classList.add('loaded');
+      
+          // Theme toggle
+          const themeToggle = document.getElementById('theme-toggle');
+          themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            
+            // Optional: Change icon
+            if (document.body.classList.contains('dark-theme')) {
+              themeToggle.textContent = '🌞'; // light mode icon
+            } else {
+              themeToggle.textContent = '🌙'; // dark mode icon
+            }
+          });
+        });
+      
+        // Fade-out navigation
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', function(e) {
+            if (link.href && link.target !== "_blank") {
+              e.preventDefault();
+              document.body.classList.remove('loaded');
+              setTimeout(() => {
+                window.location.href = link.href;
+              }, 500);
+            }
+          });
+        });
+      </script>
+      
+      
+</body>
+</html>

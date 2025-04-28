@@ -1,0 +1,100 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alik Biswas | Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="top">
+    <h1 class="logo"><a href="index.html">Alik Biswas</a></h1>
+    <nav>
+        <li><button id="theme-toggle">🌙</button></li>
+
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resume">
+      <h2>Resume</h2>
+      <h3>Education</h3>
+      <p>Bachelor of Science in Computer Science, XYZ University (2015–2019)</p>
+      <h3>Experience</h3>
+      <p><strong>Software Developer</strong>, ABC Corporation (2020–Present): Developed web applications using Python and JavaScript, collaborating on cross-functional teams to meet project goals.</p>
+      <p><strong>Intern</strong>, TechStartup Inc. (2019–2020): Assisted in building data analysis tools and maintained internal documentation.</p>
+      <h3>Summary</h3>
+      <p>Detail-oriented developer with a strong technical foundation. Proven ability to work both independently and as part of a team to deliver high-quality software.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alik Biswas. All rights reserved.</p>
+    <p><a href="#top">Back to Top</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+  <script>
+    // Fade-out on link click
+    const links = document.querySelectorAll('a');
+  
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (link.href && link.target !== "_blank") {
+          e.preventDefault();
+          document.body.classList.remove('loaded');
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 500); // match transition time (0.5s)
+        }
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+  
+      // Theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        // Optional: Change icon
+        if (document.body.classList.contains('dark-theme')) {
+          themeToggle.textContent = '🌞'; // light mode icon
+        } else {
+          themeToggle.textContent = '🌙'; // dark mode icon
+        }
+      });
+    });
+  
+    // Fade-out navigation
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (link.href && link.target !== "_blank") {
+          e.preventDefault();
+          document.body.classList.remove('loaded');
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 500);
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

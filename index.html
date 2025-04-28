@@ -1,0 +1,84 @@
+<!-- index.html (About Me page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alik Biswas | About Me</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="top">
+        <div class="logo-area">
+          <img src="profile picture/profile.jpg.jpg" alt="Alik Biswas" class="header-profile-pic">
+          <h1 class="logo"><a href="index.html">Alik Biswas</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><button id="theme-toggle">🌙</button></li>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+
+  <main class="about">
+    <section class="container">
+      <div class="about-content">
+        <!-- Correct the image path! -->
+        <img src="profile picture/profile.jpg.jpg" alt="Alik Biswas" class="profile-pic">
+        
+        <div class="about-text">
+          <h1>Hi, I'm Alik Biswas</h1>
+          <p>I'm a passionate software developer skilled in C, Java, Python, HTML, CSS, JS, Word, Excel, PowerPoint, Figma, and Visual Studio. I love creating efficient and elegant solutions!</p>
+          <h2>About Me</h2>
+          <p>Hello! I am Alik Biswas, a software developer with experience in building robust applications. I specialize in languages like C, Java, and Python, and have a strong background in web development technologies (HTML, CSS, JavaScript). My passion is crafting efficient solutions and continually learning new technologies to improve my work.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alik Biswas. All rights reserved.</p>
+    <p><a href="#top">Back to Top</a></p>
+  </footer>
+
+  <!-- JavaScript for transitions and dark mode -->
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+
+      // Theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        if (document.body.classList.contains('dark-theme')) {
+          themeToggle.textContent = '🌞'; // Switch to light mode icon
+        } else {
+          themeToggle.textContent = '🌙'; // Switch to dark mode icon
+        }
+      });
+
+      // Fade-out on link click
+      const links = document.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (link.href && link.target !== "_blank") {
+            e.preventDefault();
+            document.body.classList.remove('loaded');
+            setTimeout(() => {
+              window.location.href = link.href;
+            }, 500);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
