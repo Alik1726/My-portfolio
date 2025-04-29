@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alik Biswas | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    #hamburger { display: none; font-size: 2rem; background: none; border: none; cursor: pointer; }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: #fff; position: absolute; top: 60px; right: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); padding: 1rem; }
+      nav ul.active { display: flex; }
+      #hamburger { display: block; }
+    }
+    .about-content, .skills-grid, .projects, .resume, .contact { padding: 1rem; }
+    .about-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+    .about-content img { max-width: 200px; margin: 1rem; }
+    .about-text { max-width: 600px; margin: 1rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .skill-bar { background: #ddd; height: 10px; border-radius: 5px; overflow: hidden; }
+    .skill-progress { background: navy; height: 10px; width: 0; transition: width 1s ease-in-out; }
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: navy;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .download-btn:hover {
+      background-color: #001f4d;
+    }
+  </style>
+</head>
+<body>
+
+<header id="top">
+  <div class="logo-area">
+    <img src="profile.jpg.jpg" alt="Alik Biswas" class="header-profile-pic">
+    <h1 class="logo"><a href="#about">Alik Biswas</a></h1>
+  </div>
+  <nav>
+    <button id="hamburger">☰</button>
+    <ul>
+      <li><button id="theme-toggle">🌙</button></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="about" class="about-content">
+    <img src="profile.jpg.jpg" alt="Alik Biswas">
+    <div class="about-text">
+      <h1>Hi, I'm Alik Biswas</h1>
+      <p>I'm a passionate software developer skilled in C, Java, Python, HTML, CSS, JS, Word, Excel, PowerPoint, Figma, and Visual Studio. I love creating efficient and elegant solutions!</p>
+      <h2>About Me</h2>
+      <p>Hello! I am Alik Biswas, a software developer with experience in building robust applications. I specialize in languages like C, Java, and Python, and have a strong background in web development technologies (HTML, CSS, JavaScript). My passion is crafting efficient solutions and continually learning new technologies to improve my work.</p>
+    </div>
+  </section>
+  <section id="skills" class="skills-grid">
+    <h2>My Skills</h2>
+    <div class="skill-item"><p>C</p><div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div></div>
+    <div class="skill-item"><p>Java</p><div class="skill-bar"><div class="skill-progress" style="width: 55%;"></div></div></div>
+    <div class="skill-item"><p>Python</p><div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div></div>
+    <div class="skill-item"><p>HTML</p><div class="skill-bar"><div class="skill-progress" style="width: 60%;"></div></div></div>
+    <div class="skill-item"><p>CSS</p><div class="skill-bar"><div class="skill-progress" style="width: 45%;"></div></div></div>
+    <div class="skill-item"><p>JavaScript</p><div class="skill-bar"><div class="skill-progress" style="width: 50%;"></div></div></div>
+    <div class="skill-item"><p>Word/Excel/PowerPoint</p><div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div></div>
+    <div class="skill-item"><p>Figma</p><div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div></div>
+    <div class="skill-item"><p>Visual Studio</p><div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div></div>
+  </section>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-item"><h3>Tic Tac Toe Game (Python)</h3><p>A console-based Tic-Tac-Toe game implemented in Python.</p><a href="tictactoe.py" class="btn" target="_blank">View Code</a></div>
+    <div class="project-item"><h3>Finance Tracker (Python)</h3><p>A Python application to track income and expenses.</p><a href="finance.py" class="btn" target="_blank">View Code</a></div>
+    <div class="project-item"><h3>Video Stack (Web App)</h3><p>A web app for managing video playlists.</p><a href="https://videostack-ecommerce.netlify.app/" class="btn" target="_blank">View Project</a></div>
+  </section>
+  <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <h3>Education</h3>
+    <p>Bachelor of Science in Computer Science, XYZ University (2015–2019)</p>
+    <h3>Experience</h3>
+    <p><strong>Software Developer</strong>, ABC Corporation (2020–Present): Developed web applications using Python and JavaScript, collaborating on cross-functional teams.</p>
+    <p><strong>Intern</strong>, TechStartup Inc. (2019–2020): Assisted in building data analysis tools and maintained internal documentation.</p>
+    <h3>Summary</h3>
+    <p>Detail-oriented developer with a strong technical foundation, passionate about building high-quality software.</p>
+    <a href="Alik_Biswas_Resume.pdf" class="download-btn" download>Download Resume</a>
+  </section>
+  
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+917439345013">+91-7439345013</a></p>
+      <p><strong>Email:</strong> <a href="mailto:alikbiswas944@gmail.com">alikbiswas944@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alik-biswas-751764251" target="_blank">LinkedIn</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Alik1726" target="_blank">GitHub</a></p>
+    </div>
+    <h3>Or Send Me a Message</h3>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2025 Alik Biswas. All rights reserved.</p>
+  <p><a href="#top">Back to Top</a></p>
+</footer>
+<script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        themeToggle.textContent = document.body.classList.contains('dark-theme') ? '🌞' : '🌙';
+      });
+    }
+
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (link.href && link.target !== "_blank" && link.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    const skillProgressBars = document.querySelectorAll('.skill-progress');
+    skillProgressBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 300);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>
